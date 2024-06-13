@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.wrapper {
+    padding: 30px 20px; /* Adjust padding for smaller screens */
+    min-height: 100vh; /* Ensure it takes full height */
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .img1 {
+    width: 150px;
+}
+
+.detail {
+    padding-left: 40px;
+}
+
+.btn {
+    margin-left: 40px;
+}
+
+/* Navigation Links */
+.nav1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.nav1 li {
+    list-style: none;
+}
+
+.nav1 a {
+    text-decoration: none;
+}
+
+/* Header Section */
+.header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    grid-gap: 20px;
+    margin-bottom: 20px; /* Add margin for spacing */
+}
+
+/* Cart Section */
+.cart1 .img2 {
+    width: 100%; /* Make image responsive */
+    max-width: 400px; /* Maintain maximum width */
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .wrapper {
+        padding: 30px 50px; /* Adjust padding for medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        padding: 30px 100px; /* Adjust padding for larger screens */
+    }
+    
+    .detail {
+        padding-left: 40px;
+    }
+
+    .btn {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav, .nav1 {
+        flex-direction: column; /* Stack navigation items on small screens */
+        text-align: center;
+    }
+
+    .detail, .btn {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .header {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .cart1 .img2 {
+        width: 100%;
+    }
+}
